@@ -1,0 +1,33 @@
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin font($font-family, $font-size, $font-weight, $line-height, $text-transform) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  text-transform: $text-transform;
+  text-decoration: none;
+}
+
+@mixin font-text() {
+  @include font($font-family, $font-size, $font-weight, $line-height, $text-transform);
+}
+
+@mixin font-main-title() {
+  @include font($font-family-title, $font-size-main-title, $font-weight, $line-height-main-title, $text-transform);
+}
+
+@mixin font-title() {
+  @include font($font-family-title, $font-size-main-title, $font-weight, $line-height-title, $text-transform);
+}
+
+@mixin font-heading() {
+  @include font($font-family-title, $font-size-heading, $font-weight, $line-height-heading, $text-transform);
+}
+
+@mixin font-main-link() {
+  @include font($font-family-title, $font-size-main-link, $font-weight-main-link, $line-height-main-link, $text-transform-main-link);
+}
