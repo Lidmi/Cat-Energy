@@ -3,31 +3,52 @@
   height: $height;
 }
 
-@mixin font($font-family, $font-size, $font-weight, $line-height, $text-transform) {
+@mixin font-generation($font-family, $font-size, $font-weight, $line-height, $text-transform, $color: $basic-black) {
   font-family: $font-family;
   font-size: $font-size;
   font-weight: $font-weight;
   line-height: $line-height;
   text-transform: $text-transform;
+  color: $color;
   text-decoration: none;
 }
 
-@mixin font-text() {
-  @include font($font-family, $font-size, $font-weight, $line-height, $text-transform);
-}
-
-@mixin font-main-title() {
-  @include font($font-family-title, $font-size-main-title, $font-weight, $line-height-main-title, $text-transform);
-}
-
-@mixin font-title() {
-  @include font($font-family-title, $font-size-main-title, $font-weight, $line-height-title, $text-transform);
-}
-
-@mixin font-heading() {
-  @include font($font-family-title, $font-size-heading, $font-weight, $line-height-heading, $text-transform);
+@mixin font($line-height) {
+  @include font-generation($font-family-base, $font-size-s, $font-weight-regular, $line-height, $text-transform-none, $special-dark-grey);
 }
 
 @mixin font-main-link() {
-  @include font($font-family-title, $font-size-main-link, $font-weight-main-link, $line-height-main-link, $text-transform-main-link);
+  @include font-generation($font-family-highlight, $font-size-l, $font-weight-medium, $line-height-s, $text-transform-upper);
+}
+
+@mixin font-main-title() {
+  @include font-generation($font-family-highlight, $font-size-xxl, $font-weight-regular, $line-height-xl, $text-transform-none, $basic-white);
+}
+
+@mixin font-subtitle($font-size, $line-height ,$color) {
+  @include font-generation($font-family-highlight, $font-size, $font-weight-regular, $line-height, $text-transform-none, $color);
+}
+
+@mixin font-cathegory-title() {
+  @include font-generation($font-family-highlight, $font-size-xl, $font-weight-regular, $line-height-xxl, $text-transform-upper);
+}
+
+@mixin font-link() {
+  @include font-generation($font-family-highlight, $font-size-m, $font-weight-regular, $line-height-xxs, $text-transform-upper);
+}
+
+@mixin font-title() {
+  @include font-generation($font-family-highlight, $font-size-xxl, $font-weight-regular, $line-height-xxl, $text-transform-none);
+}
+
+@mixin font-highlight-numbers() {
+  @include font-generation($font-family-highlight, $font-size-xl, $font-weight-regular, $line-height-m, $text-transform-upper);
+}
+
+@mixin font-description() {
+  @include font-generation($font-family-base, $font-size-xs, $font-weight-regular, $line-height-xxxxs, $text-transform-low, $special-dark-grey);
+}
+
+@mixin font-text($color) {
+  @include font-generation($font-family-highlight, $font-size-l, $font-weight-regular, $line-height-xxs, $text-transform-upper, $color);
 }
