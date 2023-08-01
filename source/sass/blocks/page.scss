@@ -16,4 +16,9 @@
   &--higher {
     line-height: $line-height-xxxl;
   }
+
+  &--smaller {
+    font-size: $font-size-xl;
+    line-height: $line-height-l;
+  }
 }

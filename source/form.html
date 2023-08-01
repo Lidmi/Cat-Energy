@@ -53,14 +53,14 @@
         <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__list">
-            <li class="main-navigation__item">
-              <a class="main-navigation__link font__nav font__nav--mobile" href="index.html" >Главная</a>
-            </li>
-            <li class="main-navigation__item">
-              <a class="main-navigation__link font__nav font__nav--mobile" href="catalog.html">Каталог продукции</a>
-            </li>
             <li class="main-navigation__item main-navigation__item--current">
-              <a class="main-navigation__link font__nav font__nav--mobile" href="form.html">Подбор программы</a>
+              <a class="main-navigation__link page__title page__title--upper" href="index.html" >Главная</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link page__title page__title--upper" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link page__title page__title--upper" href="form.html">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -70,9 +70,9 @@
     <main class="page-main">
       <section class="selection">
         <div class="selection__wrapper wrapper">
-            <h1 class="selection__title page__title page__title--dark">Подбор программы</h1>
-            <p class="selection__desc">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-            <form class="form highlight-text" action="https://echo.htmlacademy.ru" method="post">
+            <h1 class="selection__title page__title">Подбор программы</h1>
+            <p class="selection__desc page__title page__title--upper">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+            <form class="form" action="https://echo.htmlacademy.ru" method="post">
                 <fieldset class="form__cat-info form__fieldset">
                     <label class="form__label">Имя:*
                         <input class="form__input" type="text" name="name" required>
@@ -111,7 +111,7 @@
 
                 </fieldset>
                 <fieldset class="form__owner-info form__fieldset">
-                    <legend class="form__legend heading">Контактные данные (владельца кота)</legend>
+                    <legend class="form__legend page__title page__title--smaller">Контактные данные (владельца кота)</legend>
                     <label class="form__label">E-mail:*
                         <input class="form__input" type="email" name="email" placeholder="kuklachev@gmail.com" required>
                     </label>
@@ -120,12 +120,12 @@
                     </label>
                 </fieldset>
                 <fieldset class="form__comment form__fieldset">
-                    <legend class="form__legend heading">Комментарий</legend>
+                    <legend class="form__legend page__title page__title--smaller">Комментарий</legend>
                     <textarea class="form__textarea highlight-text" name="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
                 </fieldset>
                 <fieldset class="form__additional form__fieldset">
-                    <legend class="form__legend heading">Дополнительно</legend>
-                    <ul class="form__list">
+                    <legend class="form__legend page__title page__title--smaller">Дополнительно</legend>
+                    <ul class="form__list form__list--dark">
                         <li class="form__item">
                             <label class="form__label">
                                 <span class="form__custom"></span>
@@ -158,10 +158,9 @@
                 </fieldset>
                 <div class="form__bottom">
                     <button class="form__button button" type="submit">Отправить заявку</button>
-                    <p class="form__text">* — Обязательные поля</p>
                 </div>
             </form>
-
+            <p class="selection__text">* — Обязательные поля</p>
         </div>
       </section>
     </main>
@@ -171,8 +170,8 @@
         <h2 class="visually-hidden">Наш адрес</h2>
         <div class="address__wrapper wrapper">
           <div class="address__text-content">
-            <p class="address__title font__highlight font__highlight--medium font__highlight--grey">приглашаем к сотрудничеству дилеров!</p>
-            <p class="address__text font__text">ул. Большая Конюшенная, д. 19/8</p>
+            <p class="address__title page__title page__title--upper">приглашаем к сотрудничеству дилеров!</p>
+            <p class="address__text">ул. Большая Конюшенная, д. 19/8</p>
             <p class="address__text">Санкт-Петербург</p>
           </div>
           <div class="address__map-content">
@@ -239,7 +238,7 @@
           </ul>
           <div class="contacts__dev">
             <span class="visually-hidden">Сайт разработчика</span>
-            <a class="contacts__dev-text font__text font__text--medium" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+            <a class="contacts__dev-text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
               <svg xmlns="http://www.w3.org/2000/svg" width="27" height="34" viewBox="0 0 27 34" fill="none">
                 <g clip-path="url(#clip0_95_230)">
                   <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#666666"/>

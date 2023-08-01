@@ -1,0 +1,17 @@
+.form {
+  @include font-highlight($font-size-m, $line-height-xs, $special-dark-grey);
+  text-transform: uppercase;
+}
+
+.form__list {
+  color: $special-dark-grey-2;
+
+  &--dark {
+    color: $basic-black;
+  }
+}
+
+.form__legend {
+  text-transform: none;
+}
+

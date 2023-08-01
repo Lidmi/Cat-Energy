@@ -1,2 +1,11 @@
-$button-height-mobile: 40px;
-$button-width-mobile: 280px;
+$button-width: 280px;
+$button-height: 40px;
+
+.button {
+  @include size($button-width, $button-height);
+  @include font-highlight($font-size-m, $line-height-s, $basic-white);
+  text-transform: uppercase;
+  display: block;
+  background-color: $basic_green;
+  border: none;
+}
