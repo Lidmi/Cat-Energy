@@ -4,6 +4,7 @@
 @import "global/variables.scss";
 @import "global/mixins.scss";
 //Blocks
+@import "blocks/page.scss";
 @import "blocks/additional.scss";
 @import "blocks/address.scss";
 @import "blocks/button.scss";
@@ -11,14 +12,12 @@
 @import "blocks/contacts.scss";
 @import "blocks/description.scss";
 @import "blocks/example.scss";
-@import "blocks/font.scss";
 @import "blocks/form.scss";
 @import "blocks/index-footer.scss";
 @import "blocks/main-navigation.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/page-header.scss";
 @import "blocks/page-main.scss";
-@import "blocks/page.scss";
 @import "blocks/programs.scss";
 @import "blocks/range.scss";
 @import "blocks/selection.scss";
@@ -26,3 +25,13 @@
 @import "blocks/stats.scss";
 @import "blocks/wrapper.scss";
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}

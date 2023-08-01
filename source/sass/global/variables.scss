@@ -1,3 +1,11 @@
+//Font sizes
+$font-size-xs: 12px;
+$font-size-s: 14px;
+$font-size-m: 16px;
+$font-size-l: 20px;
+$font-size-xl: 24px;
+$font-size-xxl: 36px;
+//Line heights
 $line-height-xxxxs: 12px;
 $line-height-xxxs: 14px;
 $line-height-xxs: 16px;
@@ -8,24 +16,12 @@ $line-height-l: 26px;
 $line-height-xl: 36px;
 $line-height-xxl: 37px;
 $line-height-xxxl: 40px;
-//Font sizes
-$font-size-xs: 12px;
-$font-size-s: 14px;
-$font-size-m: 16px;
-$font-size-l: 20px;
-$font-size-xl: 24px;
-$font-size-xxl: 36px;
 //Font weights
 $font-weight-regular: 400;
 $font-weight-medium: 500;
 //Font families
 $font-family-base: "Arial";
 $font-family-highlight: "Oswald", sans-serif;
-//Text transforms
-$text-transform-none: none;
-$text-transform-upper: uppercase;
-$text-transform-cap: capitalize;
-$text-transform-low: lowercase;
 //Colors
 $basic-green: #68b738;
 $basic-green-2: #5eaa2f;
@@ -38,27 +34,4 @@ $special-grey: #cdcdcd;
 $special-grey-2: #666666;
 $special_grey-3: #ebebeb;
 $status-error: #ff8282;
-
-//Text font
-$font-family: "Arial";
-$font-size: 14px;
-$font-weight: 400;
-$line-height: 18px;
-$text-transform: none;
-//Page-main__title font
-$font-family-title: "Oswald", sans-serif;
-$font-size-main-title: 36px;
-$line-height-main-title: 36px;
-//Title font
-$line-height-title: 40px;
-//Heading font
-$font-size-heading: 24px;
-$line-height-heading: 26px;
-//Main-navigation__link font
-$font-size-main-link: 20px;
-$font-weight-main-link: 500;
-$line-height-main-link: 20px;
-$text-transform-upper: uppercase;
-//Highlight font
-$font-size-highlight: 16px;
 

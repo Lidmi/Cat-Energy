@@ -1,0 +1,19 @@
+.page {
+  @include font($font-size-s, $line-height-xs);
+}
+
+.page__title {
+  @include font-highlight($font-size-xxl, $line-height-xl);
+
+  &--white {
+    color: $basic-white;
+  }
+
+  &--upper {
+    text-transform: uppercase;
+  }
+
+  &--higher {
+    line-height: $line-height-xxxl;
+  }
+}
