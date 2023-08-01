@@ -1,0 +1,21 @@
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin font-generation($font-family, $font-size, $font-weight, $line-height, $color) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  text-decoration: none;
+  color: $color;
+}
+
+@mixin font-highlight ($font-size, $line-height, $color: $basic-black) {
+  @include font-generation($font-family-highlight, $font-size, $font-weight-regular, $line-height, $color);
+}
+
+@mixin font ($font-size, $line-height, $color: $special-dark-grey) {
+  @include font-generation($font-family-base, $font-size, $font-weight-regular, $line-height, $color);
+}
