@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Cat Energy</title>
   </head>
@@ -52,7 +53,7 @@
       <nav class="main-navigation">
         <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-navigation__wrapper">
-          <ul class="main-navigation__list">
+          <ul class="main-navigation__list list">
             <li class="main-navigation__item main-navigation__item--current">
               <a class="main-navigation__link page__title page__title--upper" href="index.html" >Главная</a>
             </li>
@@ -72,7 +73,7 @@
         <h1 class="catalog__title page__title">Каталог продукции</h1>
         <div class="catalog__products-wrapper">
             <h2 class="visually-hidden">Список основных товаров</h2>
-            <ul class="catalog__list">
+            <ul class="catalog__list list">
                 <li class="catalog__item">
                     <img class="catalog__img" src="img/content/catalog/catalog-1.png" alt="Cat Energy PRO 500 г">
                     <p class="catalog__item-title page__title page__title--upper">Cat Energy PRO 500 г</p>
@@ -167,14 +168,14 @@
                 <li class="catalog__item">
                     <p class="catalog__item-title page__title page__title--upper">Показать еще 100500 товаров</p>
                     <p class="catalog__text">На самом деле вкусов гораздо больше!</p>
-                    <button class="catalog__link all-button button" type="button">Показать все</button>
+                    <button class="catalog__link button button--light" type="button">Показать все</button>
                 </li>
             </ul>
         </div>
 
         <div class="catalog__additional additional">
             <h2 class="additional__title page__title page__title--smaller">Дополнительные товары</h2>
-            <ul class="additional__list">
+            <ul class="additional__list list">
                 <li class="additional__item">
                     <p class="additional__item-title page__title page__title--upper">Сахарозаменитель</p>
                     <dl class="additional__info">
@@ -208,8 +209,10 @@
                     <a class="additional__link button" href="form.html">Заказать</a>
                 </li>
             </ul>
-            <div class="additional__bonus">
+            <div class="additional__wrapper-bonus">
+              <div class="additional__bonus">
                 <p class="additional__bonus-text">Закажите все и получите чехол для кота в подарок!</p>
+              </div>
             </div>
         </div>
       </section>
@@ -253,7 +256,7 @@
             </svg>
             <span class="visually-hidden">Наверх страницы</span>
           </a>
-          <ul class="contacts__socials socials">
+          <ul class="contacts__socials socials list">
             <li class="socials__item">
               <a class="socials__link" href="https://vk.com/htmlacademy">
                 <svg xmlns="http://www.w3.org/2000/svg" width="23" height="16" viewBox="0 0 23 16" fill="none">

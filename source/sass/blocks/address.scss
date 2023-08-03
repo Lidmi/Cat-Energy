@@ -1,9 +1,12 @@
 .address {
   line-height: $line-height-s;
+
+  &--light {
+    background-color: $basic-white;
+  }
 }
 
 .address__title {
   font-size: $font-size-m;
   color: #111111;
 }
-

@@ -1,5 +1,28 @@
+.example {
+  background-color: #eaeaea;
+}
+
 .example__title {
   line-height: $line-height-xxxl;
+}
+
+.example__image-wrapper {
+  @include size(280px, 232px);
+
+  display: block;
+  position: relative;
+  margin-top: 40px;
+}
+
+.example__image {
+  width: 100%;
+
+  &--hidden {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
 }
 
 .example__cost {

@@ -2,8 +2,14 @@
   @include font($font-size-s, $line-height-xs);
 }
 
+.page__body {
+  display: flex;
+  flex-direction: column;
+}
+
 .page__title {
   @include font-highlight($font-size-xxl, $line-height-xl);
+  margin: 0;
 
   &--white {
     color: $basic-white;

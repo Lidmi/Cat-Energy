@@ -11,8 +11,19 @@
   line-height: $line-height-xxxs;
 }
 
+.additional__wrapper-bonus {
+  @include size(280px, 290px);
+
+  background-repeat: no-repeat;
+  background-color: $basic-green;
+  background-image: url("../../img/decoration/catalog-bonus.jpg");
+}
+
 .additional__bonus {
   font-size: $font-size-m;
   line-height: $line-height-s;
   color: $basic-white;
+
+  @include size(100%, 100%);
+  background-color: rgba(104, 183, 56, 0.85);
 }

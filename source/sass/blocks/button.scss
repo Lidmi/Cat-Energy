@@ -8,4 +8,9 @@ $button-height: 40px;
   display: block;
   background-color: $basic_green;
   border: none;
+
+  &--light {
+    background-color: $basic-grey;
+    color: $special-dark-grey;
+  }
 }

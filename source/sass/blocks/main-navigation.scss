@@ -1,6 +1,37 @@
+.main-navigation {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  width: 100%;
+  background-color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    position: static;
+    max-width: 440px;
+  }
+}
+
+.main-navigation__list {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .main-navigation__link {
+  display: block;
+  text-align: center;
+  padding-top: 22px;
+  padding-bottom: 24px;
+  border-top: 1px solid #e6e6e6;
   font-size: $font-size-l;
   line-height: $line-height-s;
   font-weight: 500;
-}
 
+  @media (min-width: $tablet-width) {
+    border: none;
+    font-size: 18px;
+    line-height: $line-height-m;
+  }
+}

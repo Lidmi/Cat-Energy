@@ -1,0 +1,14 @@
+.description__item {
+  position: relative;
+  margin-left: 80px;
+  margin-bottom: 26px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -80px;
+    background-color: $basic-green;
+
+    @include size(60px, 60px);
+  }
+}
