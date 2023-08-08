@@ -11,10 +11,6 @@
   @include font-highlight($font-size-xxl, $line-height-xl);
   margin: 0;
 
-  &--white {
-    color: $basic-white;
-  }
-
   &--upper {
     text-transform: uppercase;
   }
@@ -26,5 +22,9 @@
   &--smaller {
     font-size: $font-size-xl;
     line-height: $line-height-l;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include font-highlight(60px, 60px);
   }
 }

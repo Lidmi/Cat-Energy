@@ -1,14 +1,25 @@
 .main-navigation {
   position: absolute;
+  top: 65px;
   z-index: 1;
-  display: none;
+  display: block;
   width: 100%;
   background-color: $basic-white;
+
+  &--hidden {
+    display: none;
+  }
 
   @media (min-width: $tablet-width) {
     display: block;
     position: static;
     max-width: 440px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 480px;
+    z-index: 2;
+    background-color: transparent;
   }
 }
 
@@ -16,6 +27,29 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
+  }
+}
+
+.main-navigation__item {
+  position: relative;
+
+  &--current {
+    @media (min-width: $tablet-width) {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 10px;
+        height: 2px;
+        width: 100%;
+        background-color: $basic-green;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      &::after {
+        background-color: $basic-white;
+      }
+    }
   }
 }
 
@@ -33,5 +67,11 @@
     border: none;
     font-size: 18px;
     line-height: $line-height-m;
+    font-weight: $font-weight-regular;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: $font-size-l;
+    color: $basic-white;
   }
 }
