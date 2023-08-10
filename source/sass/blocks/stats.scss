@@ -1,10 +1,74 @@
+.stats {
+  display: flex;
+  justify-content: space-between;
+
+  max-width: 300px;
+
+  margin: 0 auto;
+  margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 366px;
+    max-width: 390px;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 55px;
+  }
+}
+
+.stats__item {
+  position: relative;
+
+  @include size(124px, 56px);
+  box-sizing: border-box;
+  border: 2px solid $special-grey;
+  border-radius: 5px;
+
+  padding-top: 15px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    @include size(162px, 77px);
+  }
+}
+
 .stats__number {
   font-size: $font-size-xl;
   line-height: $line-height-m;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: $line-height-xxl;
+  }
 }
 
 .stats__description {
+  position: absolute;
+  display: block;
+  left: 50%;
+  margin: 0;
+  margin-left: -41px;
+  bottom: -14px;
+
+  @include size(82px, 24px);
+
+  background-color: #eaeaea;
+
   font-size: $font-size-xs;
   line-height: $line-height-xxxxs;
   text-transform: lowercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font-size-s;
+    line-height: $line-height-xxxs;
+
+    background-color: $basic-white;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: #eaeaea;
+  }
 }

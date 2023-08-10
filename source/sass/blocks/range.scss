@@ -1,4 +1,87 @@
+.range {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0 auto;
+  width: 210px;
+
+  @media (min-width: $tablet-width) {
+    width: 590px;
+  }
+}
+
+.range__wrapper {
+  cursor: pointer;
+  padding: 17px 0;
+}
+
+.range__line {
+  position: relative;
+
+  @include size(86px, 14px);
+  box-sizing: border-box;
+
+  background-color: $basic-white;
+  border: 1px solid $special-grey;
+  border-radius: 5.5px;
+
+  @media (min-width: $tablet-width) {
+    @include size(426px, 6px);
+    background-color: #dcdcdc;
+    border: none;
+  }
+}
+
+.range__button {
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  margin-top: -3px;
+
+  cursor: pointer;
+
+  @include size(36px, 6px);
+
+  border: none;
+  border-radius: 3px;
+  background-color: $basic-green;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    left: 0;
+    margin-top: -17px;
+
+    @include size(34px, 34px);
+
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+    border: 1px solid $special-grey;
+    background-color: $basic-white;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      margin-left: -3px;
+      display: block;
+
+      @include size(6px, 6px);
+      border-radius: 50%;
+      background-color: $basic-green;
+    }
+  }
+}
+
 .range__text {
   font-size: $font-size-m;
   line-height: $line-height-s;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font-size-l;
+    line-height: 30px;
+    padding: 5px 0;
+  }
 }

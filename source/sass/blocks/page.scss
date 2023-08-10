@@ -1,5 +1,10 @@
 .page {
   @include font($font-size-s, $line-height-xs);
+
+  @media (min-width: $tablet-width) {
+    font-size: $font-size-m;
+    line-height: $line-height-m;
+  }
 }
 
 .page__body {
