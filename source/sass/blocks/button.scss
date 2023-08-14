@@ -8,6 +8,8 @@ $button-height: 40px;
   display: block;
   background-color: $basic_green;
   border: none;
+  text-align: center;
+  box-sizing: border-box;
 
   &--light {
     background-color: $basic-grey;

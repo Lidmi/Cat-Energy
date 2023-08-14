@@ -121,13 +121,10 @@
 .example__image-inner {
   position: absolute;
   bottom: 85px;
-  left: 50%;
-  margin: 0 auto;
-  margin-left: -140px;
+  // left: 50%;
+  // margin-left: -140px;
 
   @include size(280px, 232px);
-
-  display: block;
 
   @media (min-width: $tablet-width) {
     @include size(592px, 520px);
@@ -139,6 +136,21 @@
   @media (min-width: $desktop-width) {
     bottom: 65px;
   }
+
+  &:first-child {
+    @media (min-width: $tablet-width) {
+      background-image: url("../../img/content/tablet/cat-fat.png");
+      left: 0;
+    }
+  }
+
+  &:nth-child(2) {
+    @media (min-width: $tablet-width) {
+      background-image: url("../../img/content/tablet/cat-skinny.png");
+      // width: 100px;
+      right: 0;
+    }
+  }
 }
 
 .example__image {
@@ -149,7 +161,7 @@
   }
 
   &--tablet {
-    display: none;
+    opacity: 0;
   }
 
   @media (min-width: $tablet-width) {
@@ -158,7 +170,8 @@
     }
 
     &--tablet {
-      display: block;
+      opacity: 1;
     }
   }
 }
+
