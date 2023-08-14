@@ -121,6 +121,7 @@
   position: absolute;
   left: 50%;
   margin-left: -140px;
+  padding: 8px;
   top: 440px;
 
   @media (min-width: $tablet-width) {
@@ -128,6 +129,7 @@
     left: 120px;
     margin-left: 0;
     font-size: $font-size-l;
+    padding: 14px;
 
     @include size(244px, 54px);
   }
