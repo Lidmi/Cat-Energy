@@ -107,6 +107,7 @@
   padding-bottom: 40px;
 
   @media (min-width: $tablet-width) {
+    max-width: $tablet-width;
     padding-top: 370px;
     padding-bottom: 55px;
     background-color: #eaeaea;
@@ -121,16 +122,16 @@
 .example__image-inner {
   position: absolute;
   bottom: 85px;
-  // left: 50%;
-  // margin-left: -140px;
+  left: 50%;
+  margin-left: -140px;
 
   @include size(280px, 232px);
 
   @media (min-width: $tablet-width) {
     @include size(592px, 520px);
     bottom: 120px;
-    margin: 0;
-    margin-left: -296px;
+    left: 0;
+    margin-left: 88px;
   }
 
   @media (min-width: $desktop-width) {
@@ -140,15 +141,12 @@
   &:first-child {
     @media (min-width: $tablet-width) {
       background-image: url("../../img/content/tablet/cat-fat.png");
-      left: 0;
     }
   }
 
   &:nth-child(2) {
     @media (min-width: $tablet-width) {
       background-image: url("../../img/content/tablet/cat-skinny.png");
-      // width: 100px;
-      right: 0;
     }
   }
 }

@@ -39,7 +39,7 @@
   left: 4px;
   margin-top: -3px;
 
-  cursor: move;
+  cursor: pointer;
 
   @include size(36px, 6px);
 
@@ -91,6 +91,7 @@
 .range__text {
   font-size: $font-size-m;
   line-height: $line-height-s;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     font-size: $font-size-l;
