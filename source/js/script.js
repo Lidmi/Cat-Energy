@@ -1,25 +1,24 @@
-let tabletWidth = 768;
-let desktopWidth = 1440;
+const tabletWidth = 768;
+const desktopWidth = 1440;
 
-let menuBtn = document.querySelector('.page-header__toggle');
-let mainNav = document.querySelector('.main-navigation');
+const menuBtn = document.querySelector('.page-header__toggle');
+const mainNav = document.querySelector('.main-navigation');
 
 menuBtn.onclick = () => {
   console.log("click");
   mainNav.classList.toggle('main-navigation--hidden');
 }
 
-let rangeLine = document.querySelector('.range__line');
-let rangeBtn = document.querySelector('.range__button');
+const rangeLine = document.querySelector('.range__line');
+const rangeBtn = document.querySelector('.range__button');
 
 let exampleImages;
-let rangeText = document.querySelectorAll('.range__text');
+const rangeText = document.querySelectorAll('.range__text');
 
 if (document.documentElement.clientWidth < tabletWidth) {
   rangeBtn.draggable = false;
 
   exampleImages = document.querySelectorAll('.example__image--mobile');
-
 
   rangeLine.onclick = () => {
     exampleImages[0].classList.toggle('example__image--current');
@@ -87,13 +86,13 @@ if (document.documentElement.clientWidth >= tabletWidth) {
       rangeBtn.onmouseup = null;
       };
 
-      // const wrapper = document.querySelector('.example__image-wrapper');
-
     document.onmouseup = function() {
       document.removeEventListener('mousemove', onMouseMove);
       rangeBtn.onmouseup = null;
       };
     }
 
+    exampleImages = document.querySelectorAll('.example__image-inner');
+    // exampleImages[1].style.width = 300 + 'px';
 }
 

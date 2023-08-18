@@ -102,64 +102,61 @@
   }
 }
 
+$example-width: 0;
+$example-width-2: $tablet-width - $example-width;
+
 .example__image-wrapper {
   position: relative;
   padding-bottom: 40px;
 
   @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
     padding-top: 370px;
     padding-bottom: 55px;
     background-color: #eaeaea;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 287px;
-    padding-bottom: 0;
   }
 }
 
 .example__image-inner {
   position: absolute;
-  bottom: 85px;
   left: 50%;
   margin-left: -140px;
-
-  @include size(280px, 232px);
+  bottom: 85px;
 
   @media (min-width: $tablet-width) {
-    @include size(592px, 520px);
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
     bottom: 120px;
-    left: 0;
-    margin-left: 88px;
-  }
 
-  @media (min-width: $desktop-width) {
-    bottom: 65px;
-  }
-
-  &:first-child {
-    @media (min-width: $tablet-width) {
-      background-image: url("../../img/content/tablet/cat-fat.png");
+    &:first-child .example__image-container {
+      width: $example-width-2;
     }
-  }
 
-  &:nth-child(2) {
-    @media (min-width: $tablet-width) {
-      background-image: url("../../img/content/tablet/cat-skinny.png");
+    &:nth-child(2) .example__image-container {
+      width: $example-width;
+      transform: scaleX(-1);
+
+      .example__image {
+        transform: scaleX(-1);
+      }
     }
   }
 }
 
-.example__image {
-  width: 100%;
+.example__image-container {
+  @media (min-width: $tablet-width) {
+    overflow: hidden;
+    min-width: 0;
+  }
+}
 
+.example__image {
   &:not(&--current) {
     display: none;
   }
 
   &--tablet {
-    opacity: 0;
+    display: none;
   }
 
   @media (min-width: $tablet-width) {
@@ -168,8 +165,13 @@
     }
 
     &--tablet {
-      opacity: 1;
+      display: block;
     }
   }
 }
 
+.example__image-hidden {
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+  }
+}
